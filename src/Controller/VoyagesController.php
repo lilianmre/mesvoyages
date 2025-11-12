@@ -11,9 +11,9 @@ use Symfony\Component\Routing\Annotation\Route;
  *
  * @author lil2n
  */
-class AccueilController extends AbstractController {
-    #[Route('/accueil', name: 'accueil')]
+class VoyagesController extends AbstractController {
+    #[Route('/voyages', name: 'voyages')]
     public function index(): Response {
-        return $this->render("pages/accueil.html.twig");
+        return $this->render("pages/voyages.html.twig");
     }
 }
