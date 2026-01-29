@@ -27,6 +27,7 @@ use Vich\UploaderBundle\Mapping\Attribute as Vich;
     private ?string $ville = null;
 
     #[ORM\Column(length: 50)]
+    #[Assert\LessThanOrEqual("now")]
     private ?string $pays = null;
 
     #[ORM\Column(type: Types::DATE_MUTABLE, nullable: true)]
