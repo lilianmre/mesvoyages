@@ -21,7 +21,6 @@ class AccueilController extends AbstractController {
     public function __construct(VisiteRepository $repository) {
         $this->repository = $repository;
     }    
-    
     #[Route('/', name: 'accueil')]
     public function index(): Response {
         $visites = $this->repository->findAllLasted(2);
